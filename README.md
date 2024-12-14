@@ -1,76 +1,42 @@
 # Sudoku Solver
 
-## Overview
+This project is a C-based **Sudoku Solver** that solves a 9x9 Sudoku puzzle using logical reasoning. It utilizes a structured approach with `structs` to represent Sudoku components, such as `Square`, `Box`, and `Sudoku`, allowing the solver to dynamically process the puzzle.
 
-This project is a C-based implementation of a Sudoku solver. The program uses structures like Square, Box, and Sudoku to represent and solve a 9x9 Sudoku puzzle. It incorporates techniques like updating possibilities for each cell and checking solvable squares to deduce the solution.
+---
 
-Features
+## Features
 
-Dynamic Data Structures: Uses struct in C to represent individual squares, boxes, and the entire Sudoku puzzle.
+- **Dynamic Puzzle Representation**: Uses a combination of arrays and structures to dynamically store and manipulate the puzzle.
+- **Logical Solving**: Implements various strategies, including box singles and row-column constraints, to logically solve the puzzle.
+- **Progressive Solving**: Continuously updates the solvable squares until the puzzle is completed or deemed unsolvable.
+- **Console Output**: Prints the Sudoku puzzle before and after solving for clear visualization.
 
-Logic-Based Solving: Implements logic for updating possibilities and solving squares systematically.
+---
 
-Partial Puzzle Input: Users can modify the initial puzzle input to solve any valid Sudoku.
+## Files in the Repository
 
-Readable Output: Prints the puzzle in a structured 9x9 grid format.
+- **`sudoku_solver.c`**: The main implementation file containing the code for solving the Sudoku puzzle.
+- **Sample Input Puzzle**: A pre-defined 9x9 puzzle is embedded in the `createPuzzle` function.
+- **Output Display**: The console output shows the puzzle at different stages of solving.
 
-Getting Started
+---
 
-Prerequisites
+## How to Run the Project
 
-To compile and run this program, you need:
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/sudoku-solver.git
+   cd sudoku-solver
 
-A C compiler (e.g., GCC).
+2. **Compile the Code: Use a C compiler such as GCC to compile the program:
+   ```bash
+   gcc sudoku_solver.c -o sudoku_solver
 
-A terminal or IDE to run the program.
+3. Run the Program: Execute the compiled program:
+   ```bash
+   ./sudoku_solver
 
-Compilation
-
-To compile the program, use the following command:
-
-gcc -o sudoku_solver sudoku_solver.c
-
-Execution
-
-Run the program with:
-
-./sudoku_solver
-
-Usage
-
-Modify the createPuzzle function in the code to input your Sudoku puzzle.
-
-Replace the array variable with your desired puzzle.
-
-Use 0 to represent empty cells.
-
-Compile and execute the program.
-
-The program will attempt to solve the puzzle and print the results in the terminal.
-
-Example Input
-
-int array[9][9]= {
-    1, 0, 0,      5, 0, 0,     0, 4, 3,
-    4, 7, 0,      1, 0, 2,     0, 5, 0,
-    0, 0, 0,      0, 0, 0,     2, 9, 1,
-
-    9, 0, 3,      4, 0, 0,     5, 8, 6,
-    6, 0, 0,      0, 0, 5,     0, 2, 0,
-    0, 5, 0,      0, 0, 0,     1, 7, 0,
-
-    3, 0, 5,      8, 0, 0,     9, 6, 2,
-    0, 2, 6,      3, 0, 9,     8, 0, 5,
-    8, 0, 0,      0, 5, 0,     0, 0, 0
-};
-
-Output
-
-The program prints the initial puzzle and the solved puzzle.
-
-If the puzzle cannot be solved, a failure message is displayed.
-
-File Structure
-
-sudoku_solver.c: Contains the full implementation of the Sudoku solver.
-
+4. Output:
+- **The program displays the Sudoku puzzle before solving.
+- **Shows progress and stops if it cannot logically solve the puzzle.
+- **Prints the solved puzzle if successful.
