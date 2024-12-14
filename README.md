@@ -1,6 +1,6 @@
 # Sudoku Solver
 
-Overview
+## Overview
 
 This project is a C-based implementation of a Sudoku solver. The program uses structures like Square, Box, and Sudoku to represent and solve a 9x9 Sudoku puzzle. It incorporates techniques like updating possibilities for each cell and checking solvable squares to deduce the solution.
 
