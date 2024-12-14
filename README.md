@@ -37,6 +37,50 @@ This project is a C-based **Sudoku Solver** that solves a 9x9 Sudoku puzzle usin
    ./sudoku_solver
 
 4. Output:
-- **The program displays the Sudoku puzzle before solving.
-- **Shows progress and stops if it cannot logically solve the puzzle.
-- **Prints the solved puzzle if successful.
+- The program displays the Sudoku puzzle before solving.
+- Shows progress and stops if it cannot logically solve the puzzle.
+- Prints the solved puzzle if successful.
+
+## Sample Input and Output
+
+### Sample Input
+
+The input puzzle is represented as a 9x9 grid with zeros indicating empty cells:
+
+```plaintext
+----------------------------------
+|  1  0  0 |  5  0  0 |  0  4  3 |
+|  4  7  0 |  1  0  2 |  0  5  0 |
+|  0  0  0 |  0  0  0 |  2  9  1 |
+----------------------------------
+|  9  0  3 |  4  0  0 |  5  8  6 |
+|  6  0  0 |  0  0  5 |  0  2  0 |
+|  0  5  0 |  0  0  0 |  1  7  0 |
+----------------------------------
+|  3  0  5 |  8  0  0 |  9  6  2 |
+|  0  2  6 |  3  0  9 |  8  0  5 |
+|  8  0  0 |  0  5  0 |  0  0  0 |
+----------------------------------
+```
+
+### Sample Output
+
+The output puzzle is represented as a 9x9 grid:
+
+```plaintext
+
+----------------------------------
+|  1  8  2 |  5  9  6 |  7  4  3 |
+|  4  7  9 |  1  3  2 |  6  5  8 |
+|  5  3  6 |  7  4  8 |  2  9  1 |
+----------------------------------
+|  9  1  3 |  4  7  2 |  5  8  6 |
+|  6  4  7 |  9  8  5 |  3  2  1 |
+|  2  5  8 |  6  1  3 |  4  7  9 |
+----------------------------------
+|  3  9  5 |  8  6  1 |  9  6  2 |
+|  7  2  6 |  3  4  9 |  8  1  5 |
+|  8  6  4 |  2  5  7 |  1  3  9 |
+----------------------------------
+
+
